@@ -10,16 +10,17 @@ To minimize and implement a Boolean function using logic gates and verify the fu
 •	Verilog HDL
 ## Boolean Function
 Consider the Boolean function:
-F(A,B,C,D)=Σm(0,2,5,7,8,10,13,15)
-The minimized Boolean expression is: F=B'D'+BD
+F(A,B)=Σm(0,1,3)
+The minimized Boolean expression is: F=A'+B
 The function is implemented using Verilog HDL.
 ## Files Used
 File	Description
-exp1_boolean_min.v	Verilog design file
-exp1_boolean_min_tb.v	Verilog testbench
-exp1_boolean_min.vcd	VCD waveform dump generated during simulation
+fun.v	Verilog design file
+tb.v	Verilog testbench
+fun.vcd	VCD waveform dump generated during simulation
 
 ## Verilog Program
+//gedit fun.v
 module fun (
 input wire A, 
 input wire B, 
@@ -31,7 +32,7 @@ endmodule
 
 
 ## TestBench Program
-
+//gedit tb.v
 module tb;
     reg A, B;
     wire F;
